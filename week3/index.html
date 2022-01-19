@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="">-->
+    <meta charset="utf-8">
+    <title>WDD-330 Week3 notes</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Week3 notes for WDD-330">
+    <!--<meta name="keywords" content="">-->
+    <meta name="author" content="Austin Bowler">
+</head>
+
+<body>
+    <header>
+        <h1>WDD-330 Week3 notes</h1>
+        <nav id="navBar">
+            <ol>
+                <li id="indexLink"><a href="../index.html">WDD-330 Homepage</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <h2>This week's learning outcome:</h2>
+        <h3>This week I focused on Javascript objects and events, according to the weekly reading assignment. As a point of demonstrating my understanding, I have created a set of examples from each resource below</h3>
+        <ul>
+            <li>
+                <h4 id="resource1">Object methods, "this"</h4>
+                <p>The words below are summoned from the 'robot' object using the 'this' keyword. The image is included as reference.</p>
+                <img src="pictures/92927-1024__31295.1613147466.jpg" alt="W3Schools.com" style="width:50%">
+                <div id="robotInfo"></div>
+            </li>
+            <li>
+                <h4 id="resource2">Ch5: Objects</h4>
+                <p>The words below are taken from a JSON string, parsed into a Javascript object. The image is included as reference.</p>
+                <img src="pictures/blueprint.gif" alt="W3Schools.com" style="width:50%">
+                <div id="robby"></div>
+            </li>
+            <li>
+                <h4 id="resource3">The Document Object Model</h4>
+                <p>The list below is created using a Javascript Document Object Model.</p>
+                <ul id='robots'>
+                    <li id="1">If you see this text, my code is broken.</li>
+                    <li id="2">If you see this text, my code is broken.</li>
+                    <li id="3">If you see this text, my code is broken.</li>
+                    <li id="4">If you see this text, my code is broken.</li>
+                </ul>
+                <p id="5">If you see this text, my code is broken.</p>
+            </li>
+            <li>
+                <h4 id="resource4">Ch7: Events</h4>
+                <p>This button will tell you with which mouse button you clicked it.</p>
+                <p>NOTE: This code is based on a sample found on www.javascripttutorial.net. It was a helpful resource that taught me a lot about how to use events and event listeners.. Particularly the code which I based the below on:</p>
+                <button id="clicker">Click me</button>
+                <p id="message"></p>
+
+
+
+
+
+
+
+
+
+
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p>Last updated: 01-19-2022</p>
+    </footer>
+</body>
+
+<script>
+    //resource 1
+    const robot = {
+        name: "Robot",
+        class: "M3",
+        model: "B9",
+        purpose: "environmental control",
+        debutYear: 1965,
+
+        info: function() {
+            return "This robot is a Class " + this.class + ", Model " + this.model + " " + this.purpose + " robot. Its name is " + this.name + ".";
+        }
+    };
+
+    document.getElementById("robotInfo").innerHTML = robot.info();
+
+
+    //resource 2
+    const robby = '{"name": "Robby","debut": 1956,"movie": "Forbidden Planet","purpose": "serve man","designer": "Robert Kinoshita"}';
+    const robbyInfo = JSON.parse(robby);
+    document.getElementById("robby").innerHTML = "This robot appeared in the " + robbyInfo.debut + " movie '" + robbyInfo.movie + "'. Its purpose is to " + robbyInfo.purpose + ". Its name is " + robbyInfo.name + ".";
+
+
+    //resource 3
+    const element = document.getElementById("resource1");
+    document.getElementById("1").innerHTML =
+        "The first reading resource of this week is: " + element.innerHTML;
+    const element2 = document.getElementById("resource2");
+    document.getElementById("2").innerHTML =
+        "The second reading resource of this week is: " + element2.innerHTML;
+    const element3 = document.getElementById("resource3");
+    document.getElementById("3").innerHTML =
+        "The third reading resource of this week is: " + element3.innerHTML;
+    const element4 = document.getElementById("resource4");
+    document.getElementById("4").innerHTML =
+        "The fourth reading resource of this week is: " + element4.innerHTML;
+    document.getElementById("5").innerHTML =
+        "This is the end of my '" + element3.innerHTML + "' code example.";
+
+    //resource 4
+    let clicker = document.querySelector('#clicker');
+    clicker.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
+    clicker.addEventListener('mouseup', (e) => {
+        let msg = document.querySelector('#message');
+        switch (e.button) {
+            case 0:
+                msg.textContent = 'Left mouse button clicked.';
+                break;
+            case 1:
+                msg.textContent = 'Middle mouse button clicked.';
+                break;
+            case 2:
+                msg.textContent = 'Right mouse button clicked.';
+                break;
+            default:
+                msg.textContent = `Unknown mouse button code: ${event.button}`;
+        }
+    });
+</script></html>
