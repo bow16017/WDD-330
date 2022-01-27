@@ -1,0 +1,25 @@
+/* styles for the table based board */
+      .board {
+        width: 500px;
+        height: 500px;
+      }
+      .board td,
+      .board tr {
+        width: 30%;
+        height: 30%;
+      }
+      .board td {
+        border-right: 3px solid;
+        border-bottom: 3px solid;
+        font-size: 7em;
+        text-align: center;
+      }
+
+      .board td:last-child {
+        border-right: 0;
+      }
+
+      .board tr:last-child td {
+        border-bottom: 0;
+      }
+
