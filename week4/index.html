@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="">-->
+    <meta charset="utf-8">
+    <title>WDD-330 Week3 notes</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Week3 notes for WDD-330">
+    <!--<meta name="keywords" content="">-->
+    <meta name="author" content="Austin Bowler">
+    <script src='main.js'></script>
+    <script src='main2.js'></script>
+    <script src='main2.js'></script>
+</head>
+
+<body>
+    <header>
+        <h1>WDD-330 Week3 notes</h1>
+        <nav id="navBar">
+            <ol>
+                <li id="indexLink"><a href="../index.html">WDD-330 Homepage</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <h2>This week's learning outcome:</h2>
+        <p>This week covered ch8: Forms, ch12: Object Oriented Programming, and ch15: Modern Javascript</p>
+        <p>As a point of demonstrating my understanding, I have created a set of examples from each resource below</p>
+
+        <ul>
+            <li>
+                <h3>Chapter 8: Forms</h3>
+
+                <form>
+                    <h4>Are You a Gothic Monster?</h4>
+                    <p>A short quiz for the unsure.</p>
+                    <div id="question">
+                        <h5>Enter your name:</h5>
+                        <label for="name">Name:</label><br>
+                        <input style="width: 200px;" type="text" id="name" name="name" value="Ex. Frankenstein’s Monster"><br>
+                    </div>
+                    <div id="question">
+                        <h5>Select the era you were born in:</h5>
+                        <input type="radio" id="18th" value="18th Century" name="century">
+                        <label for="18th">18th Century</label><br>
+                        <input type="radio" id="19th" value="19th Century" name="century">
+                        <label for="19th">19th Century</label><br>
+                        <input type="radio" id="20th" value="20th Century" name="century">
+                        <label for="20th">20th Century</label><br>
+                        <input type="radio" id="21st" value="21st Century" name="century">
+                        <label for="21st">21st Century</label><br>
+                    </div>
+                    <div id="question">
+                        <h5>Select all true statements</h5>
+                        <input type="checkbox" id="st1" name="st1" value="statement1">
+                        <label for="st1">I live in Europe, Asia, or the Middle East.</label><br>
+                        <input type="checkbox" id="st2" name="st2" value="statement2">
+                        <label for="st2">I live in a castle or religious structure.</label><br>
+                        <input type="checkbox" id="st3" name="st3" value="statement3">
+                        <label for="st2">I live in secret, or live in seclusion.</label><br>
+                        <input type="checkbox" id="st4" name="st4" value="statement4">
+                        <label for="st4">I have a tragic past.</label><br>
+                        <input type="checkbox" id="st5" name="st5" value="statement5">
+                        <label for="st5">My greatest desire is to love and be loved.</label><br>
+                        <input type="checkbox" id="st6" name="st6" value="statement6">
+                        <label for="st6">I crave the normalcy I am unfairly denied.</label><br>
+                        <input type="checkbox" id="st7" name="st7" value="statement7">
+                        <label for="st7">I have a physical mutation or deformity.</label><br>
+                    </div>
+                </form>
+                <br>
+                <button type="submit" value="Submit" onclick="math();">Submit</button>
+                <br>
+                <div id="results"></div>
+            </li>
+            <li>
+                <h3>Chapter 12: Object Oriented Programming
+                </h3>
+                <p>The below information is taken from objects defined in javascript. They are children of the parent class, 'gothicMonster'.</p>
+                <h4>Gothic Monster Dating Profiles</h4>
+                <div id="profile">
+                    <h5 id="m1Name"></h5>
+                    <ul>
+                        <li id="m1Job"></li>
+                        <li id="m1Likes"></li>
+                        <li id="m1Dislikes"></li>
+                        <li id="m1Description"></li>
+                    </ul>
+                </div>
+                <div id="profile">
+                    <h5 id="m2Name"></h5>
+                    <ul>
+                        <li id="m2Job"></li>
+                        <li id="m2Likes"></li>
+                        <li id="m2Dislikes"></li>
+                        <li id="m2Description"></li>
+                    </ul>
+                </div>
+                <div id="profile">
+                    <h5 id="m3Name"></h5>
+                    <ul>
+                        <li id="m3Job"></li>
+                        <li id="m3Likes"></li>
+                        <li id="m3Dislikes"></li>
+                        <li id="m3Description"></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>Chapter 15: Modern Javascript - Modular JavaScript
+                </h3>
+                <p>Here, I have decided to write my notes and definitions, as adding an example for this would be a little ridiculous.</p>
+                <ul>
+                    <li>Modular JavaScript refers to the use of 'self-contained' code (as the textbook phrases it) as a tool for multiple different projects or files.</li>
+                    <li>A Module will contain functions, methods, etc. Each of these can be referred to again and again, so long as the host server has them imported.</li>
+                    <li>I am used to seeing this kind of multi-tool reference in Java, where it is common to import a modular library to a project. This is similar, though not exact.</li>
+                    <li>Many libraries of frameworks exist, each one offering a specific set of tools.</li>
+                    <li>JavaScript modules will allow you access to new keywords (referenced through the library's methods), pre-built functions, and more.</li>
+                    <li>Perhaps a precursor to this could be considered the age of javascript templates/freeware during the early 2000s. It is a common trend I've seen in websites built during that time: The website will use small 'snippets' or 'patches' of someone else's code in order to make their site run smoother. Now, of course, we have a much more integrated and MODULAR solution.</li>
+                </ul>
+            </li>
+        </ul>
+
+    </main>
+    <footer>
+        <p>Last updated: 01-26-2022</p>
+    </footer>
+</body></html>
