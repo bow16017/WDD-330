@@ -33,7 +33,7 @@ const hikeList = [
       'The trailhead is located on the Kolob Canyons Road, 2.12 miles off of I-15, past the Kolob Canyon Visitor’s Center.'
   }
 ];
-class hikeModel {
+class HikeOutput {
   getAllHikes() {
     return hikeList;
   }
@@ -43,4 +43,4 @@ class hikeModel {
   }
 }
 
-export default HikeModel;
+export default HikeOutput;
