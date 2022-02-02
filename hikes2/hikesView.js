@@ -1,4 +1,4 @@
-const imgs = 'https://bow16017.github.io/WDD-330/hikes/images/';
+const imgs = 'https://bow16017.github.io/WDD-330/hikes2/images/';
 
 class HikesView {
   renderHikeList(hikeListElement, hikeList) {

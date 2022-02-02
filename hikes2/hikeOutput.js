@@ -2,7 +2,7 @@
 const hikeList = [
   {
     name: 'Bechler Falls',
-    imgSrc: 'charleston.jpg',
+    imgSrc: 'falls.jpg',
     imgAlt: 'Image of Bechler Falls',
     distance: '3 miles',
     difficulty: 'Easy',
