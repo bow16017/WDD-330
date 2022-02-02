@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD-330 TODO</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="TODO WDD-330">
+    <meta name="author" content="Austin Bowler">
+    <script src='main.js'></script>
+    <link rel="stylesheet" type="text/css" href="todo.css"/>
+</head>
+
+<body>
+    <header>
+        <h1>Todos</h1>
+        <nav id="navBar">
+            <ol>
+                <li id="indexLink"><a href="../index.html">WDD-330 Homepage</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+
+        <div id="wSpace">
+
+
+
+            <div id="list"></div>
+
+            <div id="counter"></div>
+            <div id="viewer">
+
+                <button id="all" type="button" onclick="all();">All</button>
+                <button id="active" type="button" onclick="active();">Active</button>
+                <button id="completed" type="button" onclick="completed();">All</button>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+        <form action="addT">
+            <input type="text" name="item" id="addTask" placeholder="Add Task" />
+            <button id="add" type="button">+</button>
+        </form>
+
+
+    </main>
+    <footer>
+        <p>Last updated: 02-01-2022</p>
+    </footer>
+</body></html>
