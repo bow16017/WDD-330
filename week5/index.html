@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="">-->
+    <meta charset="utf-8">
+    <title>WDD-330 Week5 notes</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Week5 notes for WDD-330">
+    <!--<meta name="keywords" content="">-->
+    <meta name="author" content="Austin Bowler">
+    <script src='main.js'></script>
+    <script src='main2.js'></script>
+    <script src='main2.js'></script>
+</head>
+
+<body>
+    <header>
+        <h1>WDD-330 Week5 notes</h1>
+        <nav id="navBar">
+            <ol>
+                <li id="indexLink"><a href="../index.html">WDD-330 Homepage</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <h2>This week's learning outcome:</h2>
+        <p>As a point of demonstrating my understanding, I will leave a copy of my copious notes below.</p>
+        <p>These notes cover each subject in the chapter, and I consider myself very acquainted and familiar with the information.</p>
+
+        <h3>Errors, Exceptions, and Warnings</h3>
+        <h4>Errors</h4>
+        <ul>
+            <li>System error ― Program experiences problems with the system or external device it is working with.</li>
+            <li>Programmer error ― Typos, incorrect syntax, bad logic, etc.</li>
+            <li>User error ― The program can't handle a user request or input.</li>
+        </ul>
+        <h4>Exceptions</h4>
+        <ul>
+            <li>An exception is an error which returns a value. The application can be programmed to handle the error based on its identifier.</li>
+            <li>A <strong>Stack Trace</strong> is produced by an exception. It is a way to track the error based on functions or method calls</li>
+        </ul>
+        <h4>Warnings</h4>
+        <ul>
+            <li>Warnings happen when there is a minor error in the code (minor meaning: not serious enough to cause program failure).</li>
+            <li>Sometimes errors will be administered via command line, console, GUI, or another method. This all depends on the environment where the program runs.</li>
+        </ul>
+        <h4>Testing and Debugging: Results</h4>
+        <ul>
+            <li>Obviously, the goal is to have perfectly executing code, but there should always be appropriate error handling to alert the user/programmer in case of error.</li>
+            <li>The textbook suggests making the code fail "loudly".</li>
+        </ul>
+        <h4>Strict Mode</h4>
+        <ul>
+            <li>Strict mode creates more frequent and srict warnings and exceptions.</li>
+            <li>This is especially good for development, as it throws exceptions for "sloppy" code that could cause errors later.</li>
+            <li>In order to start strict mode, at the beginning of the file, type: 'use strict'</li>
+            <li><strong>Linting Tools</strong> are extra tools which highlight and help get rid of/edit sloppy code.</li>
+        </ul>
+        <h4>Feature Detection</h4>
+        <ul>
+            <li>Features are obviously constantly changing... this includes where features are/are not available, when they can be incorporated, etc.</li>
+            <li>In order to incorporate feature detection in your code, use 'if' statements</li>
+            <li>The example from the book uses the 'window.' method to call forth the targeted api before activating a feature. There are other ways to reference the API, but what really matters is that the feature is contained in the 'if' statement.</li>
+        </ul>
+        <h4>In-Browser Debugging</h4>
+        <ul>
+            <li>ALERT <ul>
+                    <li>An Alert 'alert()' is used to stop the code from running util the 'okay' signal is given by the programmer.</li>
+                    <li>It creates breakpoints and can display explanatory messages.</li>
+                </ul>
+            </li>
+            <li>THE CONSOLE <ul>
+                    <li>The console object allows for the 'bookmarking' of code.</li>
+                    <li>In the console object, you can manipulate parts of the code without stopping the program (variables, etc).</li>
+                </ul>
+            </li>
+            <li>PRE-INSTALLED BROWSER TOOLS <ul>
+                    <li>Most modern browsers have debuggers built in. Some of these include:<ul>
+                            <li>Firefox</li>
+                            <li>Edge</li>
+                            <li>Chrome</li>
+                            <li>Safari</li>
+                        </ul>
+                    </li>
+                    <li>In these debuggers, you can set breakpoints, see error messages, hover over lines to see more detailed descriptions, etc.</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Error Objects</h4>
+        <ul>
+            <li>Error objects are either automatically created by the system, or manually created for later throws by the programmer.</li>
+            <li>Use the 'new' method to invoke a new Error.</li>
+            <li>SPECIFIC ERROR TYPES <ul>
+                    <li>Error - Regular, everyday generic error.</li>
+                    <li>EvalError - NOT IN CURRENT USE!!! Was used for the 'eval()' function.</li>
+                    <li>RangeError - Number is outside of preset range.</li>
+                    <li>ReferenceError - Reference was made to an object, function, method, variable, etc. that does not exist.</li>
+                    <li>SyntaxError - Error in code's syntax.</li>
+                    <li>TypeError - Mixmatch in value type (ex. Number type expected, string provided).</li>
+                    <li>URIError - URI problems (encoding, decoding).</li>
+                    <li>InternalError - Problems with JavaScript engine. This is a non-standard error.</li>
+                </ul>
+            </li>
+            <li>These can all have custom messages.</li>
+            <li>THROWING EXCEPTIONS - Use 'throw' statement. Write a catch block to activate errors when faced.</li>
+        </ul>
+        <h4>Exception Handling</h4>
+        <ul>
+            <li>When code is suspect to an exception (custom or automatic), you include a try block.</li>
+            <li>The <strong>try block</strong> should include the code in question.</li>
+            <li>Directly after the try block, the catch block is placed</li>
+            <li>The <strong>catch block</strong> contains the 'backup plan' (code that will be excecuted instead of place of the failed try block.</li>
+        </ul>
+        <h4>Tests</h4>
+        <ul>
+            <li>Tests are written in order to catch errors before they have the chance to become them.</li>
+            <li>I would consider data validation to fall under the category, as well as regular functions that can check calculations and/or return booleans.</li>
+            <li>TEST DRIVEN DEVELOPMENT - Writing tests before writing implementation code. The strategy is best handled in chunks. <ul>
+                    <li>Workflow: <ul>
+                            <li>Write tests</li>
+                            <li>Write code to compare to tests</li>
+                            <li>Refactor code</li>
+                            <li>Test refactored code</li>
+                            <li>Continue/repeat</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><Strong>Testing Frameworks</Strong> - Some testing frameworks (like Jest) exist for the purpose of having pre-built tests. This is nice for times when writing your own custom tests is too time consuming or complicated.</li>
+        </ul>
+
+
+    </main>
+    <footer>
+        <p>Last updated: 02-01-2022</p>
+    </footer>
+</body></html>
