@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="TODO WDD-330">
     <meta name="author" content="Austin Bowler">
-    <script src='main.js'></script>
     <link rel="stylesheet" type="text/css" href="todo.css"/>
 </head>
 
@@ -15,9 +14,7 @@
     <header>
         <h1>Todos</h1>
         <nav id="navBar">
-            <ol>
-                <li id="indexLink"><a href="../index.html">WDD-330 Homepage</a></li>
-            </ol>
+                <p id="indexLink"><a href="../index.html">WDD-330 Homepage</a></p>
         </nav>
     </header>
     <main>
@@ -26,14 +23,16 @@
 
 
 
-            <div id="list"></div>
+            <ul id="fList"></ul>
+
 
             <div id="counter"></div>
+            <script src='utilities.js'></script>
             <div id="viewer">
 
                 <button id="all" type="button" onclick="all();">All</button>
                 <button id="active" type="button" onclick="active();">Active</button>
-                <button id="completed" type="button" onclick="completed();">All</button>
+                <button id="completed" type="button" onclick="completed();">Completed</button>
             </div>
 
 
@@ -44,14 +43,16 @@
 
 
 
-        <form action="addT">
-            <input type="text" name="item" id="addTask" placeholder="Add Task" />
-            <button id="add" type="button">+</button>
+        <form>
+            <label for="addTask"></label><input type="text" name="item" id="addTask" placeholder="Add Task" />
+            <button id="add" type="button" onclick="newListItem()">+</button>
         </form>
+        
 
 
     </main>
     <footer>
         <p>Last updated: 02-01-2022</p>
     </footer>
+    <script src='main.js'></script>
 </body></html>
