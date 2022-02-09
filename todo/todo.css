@@ -1,13 +1,113 @@
-ul li {
-  
-  list-style-type: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+body {
+    margin: 0;
+    min-width: 250px;
+    background-color: #604E48;
+    font-family: Helvetica, sans-serif;
+    overflow: scroll;
 }
 
-ul li.checked {
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-  text-decoration: line-through;
+header {
+    background-color: #382F2D;
+    border-style: solid;
+    border-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center
+}
+
+nav p,
+a {
+    text-align: center;
+    list-style-type: none;
+    color: white;
+}
+
+
+#viewer button,
+#counter {
+    padding: 10px;
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    background-color: #0e480e;
+    color: white;
+    border-style: solid;
+    border-color: black;
+}
+
+#counter:before {
+    content: 'Total: ';
+}
+
+input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+#add {
+    padding: 10px;
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    background-color: #0e480e;
+    color: white;
+}
+
+footer {
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    /* Height of the footer */
+    background: #382F2D;
+}
+
+footer p {
+    padding-left: 3%;
+    vertical-align: middle;
+}
+
+section object.checked {
+
+    text-decoration: line-through;
+}
+
+section object.invisible {
+
+    color: transparent;
+}
+
+section object {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+
+    background-color: #DEC19B;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+
 }
