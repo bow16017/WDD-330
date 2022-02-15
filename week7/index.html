@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="">-->
+    <meta charset="utf-8">
+    <title>WDD-330 Week7 notes</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Week7 notes for WDD-330">
+    <!--<meta name="keywords" content="">-->
+    <meta name="author" content="Austin Bowler">
+</head>
+
+<body>
+    <header>
+        <h1>WDD-330 Week7 notes</h1>
+        <nav id="navBar">
+            <ol>
+                <li id="indexLink"><a href="../index.html">WDD-330 Homepage</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <h2>This week's learning outcome:</h2>
+        <p>As a point of demonstrating my understanding, I will leave a copy of my copious notes below.</p>
+        <p>These notes cover each subject in the chapter, and I consider myself very acquainted and familiar with the information.</p>
+
+        <h3>Further Functions</h3>
+        <h4>Function Properties and Methods</h4>
+        <ul>
+            <li>Functions are first-class objects <ul>
+                    <li>This means that functions can contain properties and methods as well.</li>
+                    <li>The example in the book references a function that had the 'length' property. It queried its existence via dot notation.</li>
+                </ul>
+            </li>
+        </ul>
+        <h5>Call and Apply Methods</h5>
+        <ul>
+            <li>call() can be used to set the value of 'this'. <ul>
+                    <li>I would like to point out, however, that the example in the book uses the 'this.name' reference in the context of an independent function (not specifying if it were nested) without including the 'name' identifier within the function parameters.</li>
+                </ul>
+            </li>
+            <li>The call() method can reference an object that has not been qualified using the 'this' keyword, only if the first parameter is null. <ul>
+                    <li>ie. robot.call(null, soilSampler)</li>
+                    <li>This is the reason I addressed the book example earlier... I'm sure someone would get confused without context, and misinterpret the meaning of the above principle.</li>
+                </ul>
+            </li>
+            <li>apply() is the same, except its arguments are organized as an array.</li>
+        </ul>
+        <h5>Custom Properties</h5>
+        <ul>
+            <li>Just like adding properties to objects, you can add properties to functions.</li>
+            <li>The book example was particularly interesting because it created a 'description' property that literally says what the function does in plaintext. </li>
+        </ul>
+        <h6>Memoization</h6>
+        <ul>
+            <li>Memoization is the process of saving the result in a 'cache' property to save the reduntant usage of a function that will be called again.</li>
+        </ul>
+
+        <h4>Immediately Invoked Function Expressions</h4>
+        <ul>
+            <li>An Immediately Invoked Function Expression (IIFE) is a function that is excecuted as soon as it is defined.</li>
+            <li>I used two of these in my ToDo application for week six.</li>
+        </ul>
+        <h5>Temporary Variables</h5>
+        <ul>
+            <li>The temporary variable is defined with the 'temp' keyword, and is only active/exisiting during the excecution of the immediately invoked function.<ul>
+                    <li>I should have used these in my ToDo application for week six.</li>
+                </ul>
+            </li>
+        </ul>
+        <h5>Initialization Code</h5>
+        <ul>
+            <li>IIFEs are great ways to handle code that will be excecuted the same exact way every time (including constant variables).</li>
+        </ul>
+        <h5>Safe Use of Strict Mode</h5>
+        <ul>
+            <li>The best way to 'use strict' is to do so within an IIFE so that 'strict' is not enforced through the entire document.</li>
+        </ul>
+        <h5>Creating Self-contained Code Blocks</h5>
+        <ul>
+            <li>IIFEs can be used to isolate blocks of code, ensuring that the excecute without interference.</li>
+            <li>I used this in a lot of testing and debugging for the ToDo application for week six.</li>
+        </ul>
+        <h4>Functions that Define and Rewrite Themselves</h4>
+        <ul>
+            <li>A function has the ability to excecute, but also to redefine itself upon excecution.</li>
+            <li>This is achieved by using the name of the function as a variable, adding the new function afterward.<ul>
+                    <li>ie. magneticLock = function() {&#60;&#33;&#8211;&#8211; Code obviously goes here &#8211;&#8211;&#62;}</li>
+                </ul>
+            </li>
+            <li>WARNING: ANY VARIABLES NOT MANUALLY TRANSFERRED WILL BE LOST!!! </li>
+        </ul>
+        <h5>Init-Time Branching</h5>
+        <ul>
+            <li>Init-time branching allows a bypassing of the browser searching for available features.</li>
+            <li>This is done by searching for the feature once, when the target function is initialized, and re-defining the function based on browser capability.</li>
+        </ul>
+        <h4>Recursive Functions</h4>
+        <ul>
+            <li>A recursive function is one that iterates until the desired result is produced.</li>
+            <li>Simple enough, I have been using these long before I even started earnestly studying computer programming.</li>
+        </ul>
+        <h4>Callbacks</h4>
+        <ul>
+            <li>The textbook very simply and perfectly states that they are, "functions passed to other functions as arguments and then invoked inside the function they are passed to."</li>
+        </ul>
+        <h5>Event-driven Asynchronous Programming</h5>
+        <ul>
+            <li>HTML DOM events can be used to manage callbacks... and vice verca once you think about it.</li>
+            <li>I used a ton of these while writing the ToDo application for week six.</li>
+        </ul>
+        <h5>Callback Hell</h5>
+        <ul>
+            <li>Callback Hell refers to the nested use of callbacks, or nested functions inside of nested functions that are created and invoked because of callbacks.</li>
+            <li>Be smart and don't create code cycles that are confusing and ineffective. ALWAYS fine tune your code for faster response time and better simplicity for later feature additions or debugging.</li>
+        </ul>
+        <h5>Promises</h5>
+        <ul>
+            <li>Promises are the result of an asynchronous operation.</li>
+            <li>The Promise Life Cycle: <ul>
+                    <li>During the operation, the promise is 'pending'. At this stage, the promise is considered 'unsettled'</li>
+                    <li>When the operation is completed, the promise is considered 'settled'</li>
+                    <li>A settled promise can either be:<ul>
+                            <li>Resolved: the operation was successfull.</li>
+                            <li>Rejected: the operation was unsuccessful, was not completed, or resulted in an error.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Creating promises:<ul>
+                    <li>To create a promise, you must specify the resolve() option and the reject() option.</li>
+                    <li>reject() can be filled with an error code or call to another function/custom error.</li>
+                    <li>resolve() can be filled with values, functions, and more.</li>
+                    <li>One of the best ways to handle settled promises is to use the then() and catch() methods. You may also use if-else statements.</li>
+                </ul>
+            </li>
+            <li>Chaining Multiple Promises:<ul>
+                    <li>Chain or 'nest' promises together by using the then() method.</li>
+                </ul>
+            </li>
+        </ul>
+        <h5>Async Functions</h5>
+        <ul>
+            <li>Async Functions are preceeded with 'async'.</li>
+            <li>With Async Functions, you can write asynchronous code as if it was synchronous</li>
+            <li>Use the 'await' operator to wrap return values in promises. These can be assigned to variables.</li>
+        </ul>
+        <h5>Generalized Functions</h5>
+        <ul>
+            <li>Callbacks allow you to write functions that are very generalized, and can be used to create multipourpose functions... or just clean up code and make it more effective.</li>
+        </ul>
+        <h5>Functions That Return Functions</h5>
+        <ul>
+            <li>Functions can also be used to return functions.</li>
+            <li>I used that once in my ToDo application for week six.</li>
+            <li>Functions that return functions can be used in many different ways, but is most effective when trying to generalize and specify a function to be as effective as it can be.</li>
+        </ul>
+        <h4>Closures</h4>
+        <h5>Function Scope</h5>
+        <ul>
+            <li>Function scope refers to the accessibility of variables to individual functions.</li>
+            <li>This is another one of those programming principles I've been using since before my study in earnest, and is incredibly simple. Here are some of my basic rules for accessability:<ol>
+                    <li>If defined outside of any functions, this variable is global, and casn be accessed by all immediate functions.</li>
+                    <li>If defined inside of a function, this variable can be accessed only by that function, or functions within the parent function.</li>
+                    <li>Variables are not interchangeable unless within the scope of a parent function or otherwise specified by class.</li>
+                </ol>
+            </li>
+        </ul>
+        <h5>Returning Functions</h5>
+        <ul>
+            <li>In one simple sentence, the book defines what Closures are. In order to most effectively pair my notes with the definition if Closures, the direct quote from the book will be listed below.</li>
+            <li>A closure is formed when the inner function is returned by the outer function, maintaining access to any variables declared inside the enclosing function.</li>
+        </ul>
+        <h5>Generators</h5>
+        <ul>
+            <li>To create a generator, add an asterix after 'function'.<ul>
+                    <li>ie. function* dangerScan() {&#60;&#33;&#8211;&#8211; Code obviously goes here &#8211;&#8211;&#62;}</li>
+                </ul>
+            </li>
+            <li>A generator is used to create an iterator that defines output variables per iteration.</li>
+        </ul>
+        <h4>Functional Programming</h4>
+        <ul>
+            <li>Functional Programming is an ideal of programming that supports using purely functional methods.</li>
+        </ul>
+        <h5>Pure Functions</h5>
+        <ul>
+            <li>A pure function has the following attributes, as directly quoted from the book:<ol>
+                    <li>The return value of a pure function should only depend on the values provided as arguments. It doesn't rely on values from somewhere else in the program.</li>
+                    <li>There are no side-effects. A pure function doesn't change any values or data elsewhere in the program. It only makes non-destructive data transformations and returns new values, rather than altering any of the underlying data.</li>
+                    <li>Referential transparency. Given the same arguments, a pure function will always return the same result.</li>
+                </ol>
+            </li>
+            <li>The book is also gracious enough to add these requirements in great detail that would be a shame not to quote:<ol>
+                    <li>At least one argument; otherwise the return value must depend on something other than the arguments of the function, breaking the first rule.</li>
+                    <li>A return value; otherwise there’s no point in the function (unless it has changed something else in the program – in which case, it’s broken the 'no side-effects' rule).</li>
+                </ol>
+            </li>
+            <li>Pure Functions are yet another way of keeping code consise and effecient.</li>
+        </ul>
+        <h5>Higher-Order Functions</h4>
+            <ul>
+                <li>High-Order Functions are those which accept functions as arguments, or valid returns.</li>
+                <li>Closures are important in high-order functions because it generalizes them and makes everything cleaner and easier to read and process.</li>
+            </ul>
+            <h5>Currying</h5>
+            <ul>
+                <li>Another concise quote from the book: "A function is said to be curried when not all arguments have been supplied to the function, so it returns another function that retains the arguments already provided, and expects the remaining arguments that were omitted when the original function was called. A final result is only returned once all the expected arguments have eventually been provided."</li>
+                <li>In terms that are more understandable by my brain, Currying is when groups of high-order functions are used to boil down computations that can't be completed in just the one phase. I compare it to a ladder</li>
+                <li>Based on my research into how the Apollo 11 scientists did their calculations (and the kinds they were performing), I think they would have appreciated this... Although I am unsure as to if this was possible on an IBM 7094-11.</li>
+            </ul>
+
+            <h3>Ajax</h3>
+            <ul>
+                <li>From the book, "Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading. This enables data to be sent and received in the background, as well as portions of a page to be updated in response to user events, while the rest of the program continues to run. The use of Ajax revolutionized how websites worked, and ushered in a new age of web applications. Web pages were no longer static, but dynamic applications.</li>
+            </ul>
+            <h4>The Fetch API</h4>
+            <ul>
+                <li>"The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource you wish to fetch."</li>
+            </ul>
+            <h4>Response Interface</h4>
+            <ul>
+                <li>"The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is fulfilled. Response objects have a number of properties and methods that allow us to process the response effectively."</li>
+                <li>Some other properties of the Response object are:<ul>
+                        <li>headers – A Headers object (see later section) containing any headers associated with the response</li>
+                        <li>url – A string containing the URL of response</li>
+                        <li>redirected – A boolean value that specifies if the response is the result of a redirect</li>
+                        <li>type – A string value of 'basic', 'cors', 'error' or 'opaque'. A value of 'basic' is used for a response from the same domain. A value of 'cors' means the data was received from a valid cross-origin request from a different domain. A value of 'opaque' is used for a response received from 'no-cors' request from another domain, which means access to the data will be severely restricted. A value of 'error' is used when a network error occurs.</li>
+                    </ul>
+                </li>
+                <li>The response object also contains a number of methods that return promises that can then be chained together.</li>
+                <li>Redirects - "The redirect() method can be used to redirect to another URL. It creates a new promise that resolves to the response from the redirected URL."</li>
+                <li>Text Responses - "The text() method takes a stream of text from the response, reads it to completion and then returns a promise that resolves to a USVSting object that can be treated as a string in JavaScript."</li>
+                <li>File Responses - "The blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once it has read the whole file, it returns a promise that resolves with a blob object."</li>
+                <li>JSON Responses - "JSON is probably the most common format for AJAX responses. The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object."</li>
+            </ul>
+    </main>
+    <footer>
+        <p>Last updated: 02-14-2022</p>
+    </footer>
+</body></html>
