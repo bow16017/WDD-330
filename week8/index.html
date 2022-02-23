@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="">-->
+    <meta charset="utf-8">
+    <title>WDD-330 Week8 notes</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Week8 notes for WDD-330">
+    <!--<meta name="keywords" content="">-->
+    <meta name="author" content="Austin Bowler">
+</head>
+
+<body>
+    <header>
+        <h1>WDD-330 Week8 notes</h1>
+        <nav id="navBar">
+            <ol>
+                <li id="indexLink"><a href="../index.html">WDD-330 Homepage</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <h2>This week's learning outcome:</h2>
+        <p>As a point of demonstrating my understanding, I will leave a copy of my copious notes below.</p>
+        <p>These notes cover each subject in the chapter, and I consider myself very acquainted and familiar with the information.</p>
+
+        <h3>CSS3 Transforms and Transitions</h3>
+        <h4>Transforms</h4>
+        <p>The TRANSFORM property lets you:</p>
+        <ul>
+            <li>Translate
+                <ul>
+                    <li>Moves objects along the plane of your workspace.</li>
+                </ul>
+            </li>
+            <li>Rotate
+                <ul>
+                    <li>Rotates objects by point of origin. Specified by degree.</li>
+                </ul>
+            </li>
+            <li>Scale
+                <ul>
+                    <li>Resizes objects using horizontal and verical values. If only one value is provided, it is used for both values.</li>
+                </ul>
+            </li>
+            <li>Skew
+                <ul>
+                    <li>Skews an object using 'x' and 'y' plane values. If one of the values is not entered, a skew is not applied to that one, but is to the other.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>It is possible to change the TRANSFORM property's origin. This is done using the TRANSFORM-ORIGIN property.</p>
+        <p>NOTE: The order that TRANSFORMs are applied to objects is important. Be sure the browser can digest the data in a way that makes logical sense and creates the desired effect.</p>
+        <h4>Transitions</h4>
+        <p>CSS TRANSITIONs present an easier and smoother way to animate that JavaScript. This is because it requires both less processing power, hard-coded sequences, and the ability to produce gradual animations.</p>
+        <p>Use TRANSITION-PROPERTY to specify which objects/properties are affected. Default property is set to 'all'.</p>
+        <p>Use TRANSITION-TIMING-FUNCTION to control the speed of animations in a very micro-focused way.</p>
+        <p>Use TRANSITION-DELAY to indroduce delays to the animation. This is important to create smooth and purposeful invocations by the user.</p>
+        <p>Multiple transitions can be applied and still work well, so long as they are neatly and efficiently constructed.</p>
+        <h4>Animations</h4>
+        <p>Animations are used to create more complicated, longer, and more strictly controlled movements.</p>
+        <p>They utilize the following:</p>
+        <ul>
+            <li>Keyframes</li>
+            <li>Specific properits<ul>
+                    <li>name</li>
+                    <li>duration</li>
+                    <li>etc</li>
+                </ul>
+            </li>
+            <li>Timing and iteration control</li>
+            <li>Color control</li>
+        </ul>
+        <h3>Canvas, SVG, and Drag and Drop</h3>
+        <h4>Canvas</h4>
+        <p>The CANVAS API is used to draw images on a two dimensional plane via JavaScript.</p>
+        <p>A canvas object must first be created, and then drawing commands can be applied.</p>
+        <p>To command JavaScript to use a color, the following properties can be used:</p>
+        <ul>
+            <li>strokeStyle</li>
+            <li>fillStyle</li>
+            <li>canvasGradient</li>
+            <li>canvasPattern</li>
+        </ul>
+        <p>Shapes are drawn using the usual shape functions, with their accompanying values (radians, lengths, sides, etc).</p>
+        <p>Digital images, video, and text can be summoned within the canvas as well.</p>
+        <h4>SVG</h4>
+        <p>Vector-based imaging is a possibility and utility to be taken advantage of. Vector images are the best thing since pre-sliced bits... I am very used to using and creating them in almost all of my projects.</p>
+        <p>Using the SVG API is similar to CANVAS in that they both create and edit images, but the SVG takes longer because it is creating, editing, and displaying images that are responsive to digital manipulation.</p>
+        <p>One fantastic bonus to using SVG is that outside programs like Adobe Illustrator or Inkscape can be used to augment your program.</p>
+        <h4>Drag and Drop</h4>
+        <p>In order to make Drag and Drop features work, you must first make an item 'draggable'.</p>
+        <p>The DRAGGABLE value is not a boolean.</p>
+        <p>You must also create 'data transfer objects', which, in my own words, are like a buffer object which contains the data you wish to copy to the receptive field.</p>
+        <p>To make an object/field receptive, you must manage these two functions:</p>
+        <ul>
+            <li>dragover</li>
+            <li>drop</li>
+        </ul>
+    </main>
+    <footer>
+        <p>Last updated: 02-22-2022</p>
+    </footer>
+</body>
+
+</html>
