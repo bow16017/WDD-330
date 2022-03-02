@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="">-->
+    <meta charset="utf-8">
+    <title>WDD-330 Week9 notes</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Week9 notes for WDD-330">
+    <!--<meta name="keywords" content="">-->
+    <meta name="author" content="Austin Bowler">
+</head>
+
+<body>
+    <header>
+        <h1>WDD-330 Week9 notes</h1>
+        <nav id="navBar">
+            <ol>
+                <li id="indexLink"><a href="../index.html">WDD-330 Homepage</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <h2>This week's learning outcome:</h2>
+        <p>As a point of demonstrating my understanding, I will leave a copy of my copious notes below.</p>
+        <p>These notes cover each subject in the chapter, and I consider myself very acquainted and familiar with the information.</p>
+
+        <h3>The Window Object</h3>
+        <h4>The Browser Object Model</h4>
+        <p>A collection of properties and methods that contain information about the browser and computer screen</p>
+        <h5>Dialogs</h5>
+        <ul>
+            <li>Alert - Calls browser 'alert' object</li>
+            <li>Confirm - Pauses browser processes and asks for permission to continue</li>
+            <li>Prompt - A browser object used to collect input</li>
+        </ul>
+        <h4>Browser Information</h4>
+        <ul>
+            <li>Navigator - An object that contains information about the browser
+                <ul>Properties:
+                    <li>navigator</li>
+                    <li>userAgent</li>
+                </ul>
+            </li>
+            <li>Location - Contains informations about the URL
+                <ul>Properties:
+                    <li>href - Returns URL as a string</li>
+                    <li>protocol - Returns the connection protocol</li>
+                    <li>host - Returns string describing the domain</li>
+                    <li>hostname - Returns string describing the domain</li>
+                    <li>port - Returns string describing the port number</li>
+                    <li>pathname - Returns pathname following domain as a string</li>
+                    <li>search - Returns a stringified query</li>
+                    <li>hash - Places a pound sign after an identifier</li>
+                    <li>origin - Shows the origin diomain and path</li>
+                    <li>reload - Forces a reload</li>
+                    <li>assign - Load another resource from a URL</li>
+                    <li>replace - Same as the above, but saved in session history</li>
+                    <li>toString - Returns string with whole URL</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Browser History</h4>
+        <p>Used to access history about previously visited pages.</p>
+        <h4>Controlling Windows</h4>
+        <ul>
+            <li>open()</li>
+            <li>close()</li>
+            <li>moveTo()</li>
+            <li>resizeTo()</li>
+        </ul>
+        <h4>Screen Information</h4>
+        <p>Inclued information about the screen such as:</p>
+        <ul>
+            <li>height</li>
+            <li>width</li>
+            <li>screen size</li>
+            <li>color bit depth</li>
+        </ul>
+        <h4>The Document Object</h4>
+        <p>This is object which contains information on the loaded page.</p>
+        <p>The almighty write() propetry is one everyone is familiar with.</p>
+        <h4>Cookies</h4>
+        <p>Cookies are files that are stored locally on the computer. They are used to let the browser remember user data between requests.</p>
+        <p>Use the document.cookie property</p>
+        <h4>Timing Functions</h4>
+        <ul>
+            <li>setTimeout</li>
+            <li>setInterval</li>
+        </ul>
+        <h4>Animation</h4>
+        <p>The two previously mentioned timing functions can be used to create animations inn conjunction with the html and css.</p>
+        <p>Use requestAnimationFrame</p>
+
+        <h3>HTML5 APIs</h3>
+        <h4>The 'data-' Attribute</h4>
+        <p>This attribute is used to add custom data to a web page. These are private, so they are only meant to be used by javascript and not third-party services.</p>
+        <h4>HTML5 APIs</h4>
+        <p>HTML APIs allow browsers to access data from computer hardware.</p>
+        <h5>HTML Web Storage</h5>
+        <p>Similar to cookies, the Web Storage API is easier to use and can store more data. It allows data to be remembered inbetween sessions without forcing data-sharing with a server. It is also uniquee because session data can be created and editied from multiple windows simutaneously.</p>
+        <h4>An Extra Note on APIs</h4>
+        <p>There are thousands of APIs that help in a wide variety of different circumstances. Many are listed in the text, including APIs for video controls, notifications, websockets, and more.</p>
+        <h4>Drawing With Canvas</h4>
+        <p>Canvas is an element used to create an environment for javascript drawing instruction/printing.</p>
+        <p>Just about every element on the canvas is customizable... Height, width, background color, and on top of that every drawn element can also be edited and created with a high level of control.</p>
+        <p>3d rendering is only possible with third-party providers.</p>
+        <h4>Shims and Polyfills</h4>
+        <p>Shims and polyfills are what allow your implemented versions of APIs to continue to function properly in the extremely fast-changing world of the internet.</p>
+        <p>Backwards compatability as well as forward is a big deal in web development, and with shims and polyfills, you can ensure that your application works on all browser environments.</p>
+        
+    </main>
+    <footer>
+        <p>Last updated: 03-01-2022</p>
+    </footer>
+</body>
+
+</html>
