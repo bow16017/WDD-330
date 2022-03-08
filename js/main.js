@@ -38,7 +38,7 @@ const links = [
     {
 		label: 'Week10 notes',
 		url: 'week10/index.html'
-	}
+	} 
 ];
 
 const ol = document.querySelector("ol");
