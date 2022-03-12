@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="">-->
+    <meta charset="utf-8">
+    <title>WDD-330 Challenge 2</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="WDD-330 Challenge 2">
+    <!--<meta name="keywords" content="">-->
+    <meta name="author" content="Austin Bowler">
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Author Index</h1>
+        <a href="../index.html"><button id="home">Home</button></a>
+    </header>
+    <main>
+        <div id="menu">
+            <h2>Type the name of an author:</h2>
+            <input id="author" type="text" placeholder="Victor Hugo">
+            <button onClick="window.location.reload();">Cancel</button>
+            <div id="name"></div>
+        </div>
+        <div id="booksList">
+            <ul id="books"></ul>
+        </div>
+        <div id="continue">
+            <button id="submit" type="submit" onclick="collector()">Continue</button>
+        </div>
+    </main>
+    <footer>
+        <p>Last updated: 03-07-2022</p>
+    </footer>
+</body>
+
+</html>

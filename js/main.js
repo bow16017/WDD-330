@@ -38,7 +38,11 @@ const links = [
     {
 		label: 'Week10 notes',
 		url: 'week10/index.html'
-	} 
+	},
+    {
+		label: 'Challenge 2 (not finished yet)',
+		url: 'challenge2/index.html'
+	}
 ];
 
 const ol = document.querySelector("ol");

@@ -1,0 +1,15 @@
+@font-face { font-family: bebasNeue; font-weight: bold; src: url('fonts/BebasNeue-Bold.otf'); }
+h1 {
+    font-family: bebasNeue;
+}
+h2 {
+    font-family: times;
+}
+
+div {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
