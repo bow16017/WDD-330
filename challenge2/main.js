@@ -49,7 +49,7 @@ function collector() {
         getData();
         
     } else {
-        document.getElementById('name').innerHTML = "Enter the first and last name please, no more/less. No middle names, initials, or titles.";
+        document.getElementById('name').innerHTML = "Enter the first and last name please, no more/less. No middle names or titles, initials are accepted (be sure to separate them with a period rather than a space).";
         return;
     }
 }
