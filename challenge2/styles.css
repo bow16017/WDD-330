@@ -1,15 +1,117 @@
 @font-face { font-family: bebasNeue; font-weight: bold; src: url('fonts/BebasNeue-Bold.otf'); }
+header {
+    background-color: white;
+    border-bottom-color: #e6e6e6;
+    border-bottom-style: solid;
+    margin-left: -.5em;
+    margin-right: -.5em;
+}
 h1 {
     font-family: bebasNeue;
+    float: left;
+    padding-left: 5%;
+    margin-right: 20px;
+    line-height:13px;
 }
+
+header a {
+    display: block;
+    text-align: right;
+    padding: 11px 16px;
+}
+
+#home {
+    background-color: #cf4d3f;
+    color: white;
+    border: none;
+    width: 4em;
+    height: 2em;
+    border-radius: 7px;
+    
+}
+
 h2 {
     font-family: times;
+    width: 50%;
 }
 
-div {
+#menu {
+    background-color: white;
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-p {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+#author {
+    float: left;
+    margin-right: 5%;
+    line-height:27px;
+    width: 50%;
 }
+
+#reload {
+    display: block;
+    text-align: right;
+    padding: 9px 16px;
+     background-color: #cf4d3f;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+
+#name {
+    background-color: #e6e6e6;
+    margin-top: 10px;
+    line-height: 30px;
+    margin-right: 48%;
+    border-radius: 7px;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    padding-left: 5px;
+}
+
+#booksList {
+    position: absolute;
+    background-color: #e6e6e6;
+    margin-top: 10px;
+    line-height: 30px;
+    width: 90%;
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    padding-right: 5%;
+    height: 500%;
+    
+
+}
+
+footer {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: #e6e6e6;
+   text-align: center;
+    border-top-color: #e6e6e6;
+    border-top-style: solid;
+}
+
+#submit {
+    background-color: #cf4d3f;
+    color: white;
+    border: none;
+    width: 90%;
+    height: 50px;
+    font-size: 1.3em;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+

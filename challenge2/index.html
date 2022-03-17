@@ -22,17 +22,15 @@
         <div id="menu">
             <h2>Type the name of an author:</h2>
             <input id="author" type="text" placeholder="Victor Hugo">
-            <button onClick="window.location.reload();">Cancel</button>
+            <button id="reload" onClick="window.location.reload();">Cancel</button>
             <div id="name"></div>
         </div>
         <div id="booksList">
             <ul id="books"></ul>
         </div>
-        <div id="continue">
-            <button id="submit" type="submit" onclick="collector()">Continue</button>
-        </div>
     </main>
     <footer>
+            <button id="submit" type="submit" onclick="collector()">Continue</button>
         <p>Last updated: 03-07-2022</p>
     </footer>
 </body>
